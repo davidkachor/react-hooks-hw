@@ -1,21 +1,22 @@
 import { useState, useEffect, useCallback } from 'react'
 
 const useMatchMedia = (mediaQuery: string) => {
-    const [isMatches, setIsMatches] = useState(matchMedia(mediaQuery).matches)
+	const [matchMediaEl, setMatchMediaEl] = useState(matchMedia(mediaQuery))
+	const isMatches = matchMediaEl.matches
 
-    const resizeHandler = useCallback(() => {
-        setIsMatches(matchMedia(mediaQuery).matches)
-    }, [mediaQuery])
+	const resizeHandler = useCallback(() => {
+		setMatchMediaEl(matchMedia(mediaQuery))
+	}, [mediaQuery])
 
-    useEffect(() => {
-        window.addEventListener('resize', resizeHandler)
+	useEffect(() => {
+		matchMediaEl.addEventListener('change', resizeHandler)
 
-        return () => {
-            window.removeEventListener('resize', resizeHandler)
-        }
-    }, [resizeHandler])
+		return () => {
+			matchMediaEl.removeEventListener('change', resizeHandler)
+		}
+	}, [matchMediaEl, resizeHandler])
 
-    return isMatches
+	return isMatches
 }
 
 export default useMatchMedia
