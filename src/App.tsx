@@ -4,7 +4,7 @@ import SomeComponent from "./components/SomeComponent";
 function App() {
   return (
     <div>
-      <SomeComponent name='Peter'>HELLO</SomeComponent>
+      <SomeComponent>HELLO</SomeComponent>
     </div>
   );
 }

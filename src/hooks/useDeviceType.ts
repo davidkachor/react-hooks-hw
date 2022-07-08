@@ -3,7 +3,6 @@ import useMatchMedia from './useMatchMedia'
 
 const useDeviceType = () => {
 	const [isPrint, setIsPrint] = useState(false)
-
 	const isPhone = useMatchMedia('screen and (max-width: 480px)')
 	const isTablet = useMatchMedia(
 		'screen and (min-width: 480px) and (max-width: 768px)'
