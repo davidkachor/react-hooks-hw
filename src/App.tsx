@@ -75,13 +75,8 @@ function App() {
 		}
 	}, [data])
 
-	useEffect(() => {
-		sessionStorage.setItem('data', JSON.stringify(content))
-	}, [content])
-
 	return (
 		<div className={s.container}>
-			{/*<LoadingBar maxValue={itemsAmount} initialValue={loadedItemsAmount}/>*/}
 			{(loadedItemsAmount !== itemsAmount || isLoading) && (
 				<LoadingBar maxValue={itemsAmount} initialValue={loadedItemsAmount} />
 			)}
