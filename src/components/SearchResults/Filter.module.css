@@ -1,0 +1,9 @@
+.wrapper {
+	border: solid 2px black;
+	list-style: none;
+	width: 350px;
+	border-radius: 10px;
+}
+.wrapper ul {
+	list-style: none;
+}
