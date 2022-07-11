@@ -3,8 +3,8 @@ import s from './App.module.css'
 import useFetch from './hooks/useFetch'
 import LoadingBar from './components/LoadingBar/LoadingBar'
 import Person from './types/Person'
-import FilterTransition from './components/SearchResults/FilterTransition/FilterTransition'
-import FilterDeferred from './components/SearchResults/FilterDeferred/FilterDeferred'
+import FilterTransition from './components/FilterTransition/FilterTransition'
+import FilterDeferred from './components/FilterDeferred/FilterDeferred'
 
 type Action =
 	| { type: 'SET_PAGE'; page: number }

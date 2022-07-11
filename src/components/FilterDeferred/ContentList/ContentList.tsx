@@ -1,5 +1,5 @@
 import React, { useDeferredValue } from 'react'
-import Person from '../../../../types/Person'
+import Person from '../../../types/Person'
 
 const ContentList: React.FC<{ content: Person[] }> = props => {
 	const deferredContent = useDeferredValue(props.content)
@@ -7,7 +7,7 @@ const ContentList: React.FC<{ content: Person[] }> = props => {
 	return (
 		<ul>
 			{deferredContent.map(e => (
-				<li key={Math.random()}>{e.name}</li>
+				<li key={e.url}>{e.name}</li>
 			))}
 		</ul>
 	)

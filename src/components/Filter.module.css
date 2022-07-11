@@ -7,3 +7,7 @@
 .wrapper ul {
 	list-style: none;
 }
+.form {
+	display: flex;
+	flex-direction: column;
+}
